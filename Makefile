@@ -19,7 +19,7 @@ test:
 	go test ./... -cover $(PACKAGES)
 
 build: mod
-	go build -o ./bin/go-tpc cmd/go-tpc/*
+	CGO_ENABLED=0 GOOS=linux go build -o ./bin/go-tpc cmd/go-tpc/*
 
 vet:
 	go vet ./...
