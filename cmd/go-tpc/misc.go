@@ -112,7 +112,8 @@ func executeWorkload(ctx context.Context, w workload.Workloader, threads int, ac
 
 	if action == "prepare" {
 		// For prepare, we must check the data consistency after all prepare finished
-		checkPrepare(ctx, w)
+		// I say: no!
+		//checkPrepare(ctx, w)
 	}
 	outputCancel()
 
